@@ -27,12 +27,12 @@ android {
 
     productFlavors {
         free {
-            applicationId "com.udacity.gradle.builditbigger.lite"
+            applicationId "com.udacity.gradle.builditbigger.free"
             buildConfigField 'String', 'VAR', '"This is string from FREE build script"'
         }
 
         paid {
-            applicationId "com.udacity.gradle.builditbigger.pro"
+            applicationId "com.udacity.gradle.builditbigger.paid"
             buildConfigField 'String', 'VAR', '"This one is from PAID build script"'
         }
     }
@@ -47,8 +47,8 @@ dependencies {
     targetCompatibility = 1.7
     compile project(':jokedisplayer')
     compile project(path: ':backend', configuration: 'android-endpoints')
-    freeCompile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    freeCompile 'com.google.android.gms:play-services-ads:9.4.0'
     androidTestCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support:support-annotations:24.2.0'
     androidTestCompile 'com.android.support.test:runner:0.5'
